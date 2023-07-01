@@ -1,0 +1,12 @@
+#description {
+  height: 800px !important;
+}
+
+#obs {
+  height: 800px !important;
+}
+
+.swal2-popup {
+  font-size: 16px !important;
+  /* font-family: Georgia, serif; */
+}

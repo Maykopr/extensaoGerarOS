@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Gerador de OS ISP",
+  "description": "Enable focus mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "version": "1.1",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  },
+  "host_permissions": [
+    "https://integrator6.giganet.psi.br/",
+    "https://smartnet.giganet.psi.br/"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "./scripts/sweetalert2.all.min.js"
+      ],
+      "matches": [
+        "https://integrator6.giganet.psi.br/*",
+        "https://smartnet.giganet.psi.br/*"
+      ],
+      "css": [
+        "./style.css"
+      ]
+    }
+  ]
+}
